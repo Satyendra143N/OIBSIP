@@ -1,0 +1,60 @@
+====================================================
+Nmap Scan Results — Task 1: Basic Network Scanning
+Target: 172.21.222.75 (Windows host, scanned from Kali VM)
+====================================================
+
+--------------------------------------------------
+SCAN 1 — Basic Scan
+Command: nmap 172.21.222.75
+--------------------------------------------------
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-21 07:24 -0400
+Nmap scan report for 172.21.222.75
+Host is up (0.0014s latency).
+All 1000 scanned ports on 172.21.222.75 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Nmap done: 1 IP address (1 host up) scanned in 4.66 seconds
+
+
+--------------------------------------------------
+SCAN 2 — Service Version Scan
+Command: nmap -sV 172.21.222.75
+--------------------------------------------------
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-21 07:27 -0400
+Nmap scan report for 172.21.222.75
+Host is up (0.00075s latency).
+All 1000 scanned ports on 172.21.222.75 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.91 seconds
+
+
+--------------------------------------------------
+SCAN 3 — OS Detection Scan
+Command: sudo nmap -O 172.21.222.75
+--------------------------------------------------
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-21 07:32 -0400
+Nmap scan report for 172.21.222.75
+Host is up (0.00058s latency).
+All 1000 scanned ports on 172.21.222.75 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: AXIS 2100 Network Camera (92%), D-Link DP-300U, DP-G310, or Hamlet HP501UU print server (92%), HP Tru64 UNIX 5.1A (92%), Sanyo PLC-XU88 digital video projector (92%), TRENDnet TV-IP100 webcam (92%), Vantage HD7100 S satellite receiver (92%), Linux 2.6.8 (90%), Asus WL-500gP wireless broadband router (89%), Cisco 1812, 3640, or 3700 router (IOS 12.4) (89%), Cisco DOCSIS cable modem termination server (IOS 12.1) (89%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.06 seconds
+
+
+====================================================
+SUMMARY OF FINDINGS
+====================================================
+Open ports found: 0
+Filtered ports: 1000 / 1000 (all ports, all three scans)
+Reliable OS fingerprint: No (Nmap explicitly flags this as unreliable)
+
+Interpretation: All probes were silently dropped rather than
+rejected, consistent with a stateful firewall (Windows Defender
+Firewall) blocking unsolicited inbound connections at the host
+level. See README.md for full analysis.
